@@ -1,0 +1,30 @@
+<!--<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="user">
+    <div class="navbar-nav">
+        <div class="dropdown">
+            <button class="dropbtn">Home 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                
+                <a href="#">Mon profil</a>
+                
+            </div>
+          </div>
+        
+        
+    </div>
+</nav>-->
+
+<div class="navbar" *ngIf="user">
+  <div class="dropdown">
+    <button class="dropbtn nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</button>
+      <div class="dropdown-content">
+        <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Liste Des étudiants</a>
+        <a href="#">Mon profil</a>
+        <a class="nav-item nav-link" (click)="logout()">Quitter</a>
+      </div>
+    </div>
+<a class="nav-item nav-link" routerLink="/discussion" routerLinkActive="active">Discussion</a>
+<a href="#Travaux">Travaux et devoirs</a>
+<a href="#home">Participant</a>
+</div>
